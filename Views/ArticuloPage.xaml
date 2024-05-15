@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CollectionViewHorizontal.Views.ArticuloPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ArticuloPage">
+    <VerticalStackLayout>
+        <Label
+            Margin="5,5,5,15"
+            FontAttributes="Bold"
+            FontSize="24"
+            HorizontalTextAlignment="Center"
+            Text=" Detalle de Articulos " />
+        <CollectionView Margin="10" ItemsSource="{Binding Articulo}">
+            <CollectionView.Header>
+                <Grid ColumnDefinitions=".2*,*,*,*,*,.2*">
+                    <Label
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        Text="Articulo" />
+                    <Label
+                        Grid.Column="2"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="End"
+                        Text="Cantidad" />
+                    <Label
+                        Grid.Column="3"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="End"
+                        Text="Lectura" />
+                    <Label
+                        Grid.Column="4"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="End"
+                        Text="Diferencia" />
+                </Grid>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="5" ColumnDefinitions=".2*,*,*,*,*,.2*">
+
+                        <Label Grid.Column="1" Text="{Binding Name}" />
+                        <Label
+                            Grid.Column="2"
+                            HorizontalTextAlignment="End"
+                            Text="{Binding Cantidad}" />
+                        <Label
+                            Grid.Column="3"
+                            HorizontalTextAlignment="End"
+                            Text="{Binding Lectura}" />
+                        <Label
+                            Grid.Column="4"
+                            HorizontalTextAlignment="End"
+                            Text="{Binding Diferencia}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

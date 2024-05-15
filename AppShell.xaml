@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CollectionViewHorizontal.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CollectionViewHorizontal"
+    xmlns:view="clr-namespace:CollectionViewHorizontal.Views"
+    Title="CollectionViewHorizontal"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+        Title="Articulos"
+        ContentTemplate="{DataTemplate view:ArticuloPage}"
+        Route="ArticuloPage" />
+    <ShellContent
+        Title="Ubicacion"
+        ContentTemplate="{DataTemplate view:UbicacionPage}"
+        Route="UbicacionPage" />
+    <!--FlyoutItem Title="Articulos" Icon="appicon">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate view:ArticuloPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Ubicacion" Icon="appicon">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate view:UbicacionPage}" />
+        </Tab>
+    </FlyoutItem-->
+
+</Shell>
