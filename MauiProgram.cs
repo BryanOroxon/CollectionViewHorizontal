@@ -1,4 +1,3 @@
-﻿using CollectionViewHorizontal.Services;
 using CollectionViewHorizontal.Views;
 using Microsoft.Extensions.Logging;
 
