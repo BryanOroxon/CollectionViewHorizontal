@@ -5,3 +5,5 @@
 /.vs
 /CollectionViewHorizontal/bin/Debug
 /CollectionViewHorizontal/obj
+/bin/Debug/net8.0-android
+/obj
